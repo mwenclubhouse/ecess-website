@@ -11,6 +11,7 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 RUN npm install
+RUN npm install -g serve
 
 # Bundle app source
 COPY . .
@@ -22,4 +23,4 @@ EXPOSE 3000
 RUN apt update
 RUN apt upgrade -y
 
-CMD [ "npm", "start" ]
+CMD [ "serve", "-s", "build", "-p", "3000"]

@@ -64,7 +64,7 @@ jobs:
             -v /home/mwenclubhouse/ecess:/usr/src/app/bucket \
             --name ecess-website \
             --restart always \
-            -p 9009:8000 \
+            -p 9009:3000 \
             ghcr.io/mwenclubhouse/ecess-website:main ; \
           sudo docker system prune -f -a"
           gcloud compute os-login ssh-keys remove --key-file=/home/runner/.ssh/google_compute_engine.pub

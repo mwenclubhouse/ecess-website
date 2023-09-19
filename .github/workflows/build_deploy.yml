@@ -6,6 +6,11 @@
 name: Create, Publish Docker Image. Deploy to GCP.
 
 on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for Manual WorkFlow"
+        required: true
   push:
     branches: ['main']
 
